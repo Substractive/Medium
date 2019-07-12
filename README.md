@@ -40,3 +40,6 @@ All components have dev property that will just print_r data to help you see wha
 **This plugin is free and will stay free**. Feel free to write your opinion and check github if you want to look at the code or make pull requests.
 
 Thank you all for reading through documentation. If you think we missed something contact us and we will fix it.
+
+You can find plugin on October cms store right here: https://octobercms.com/plugin/ideaverum-medium
+For all questions or suggestions contact us at info@ideaverum.hr or visit https://ideaverum.hr/en/contact and leave a message
