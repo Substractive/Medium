@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="text-center">Settings</h1>
+    </div>
+</div>
+<div class="row m-t-md">
+    <div class="col-lg-10 col-lg-offset-1" style="padding:15px;">
+        <form id="app" class="form-elements" role="form" data-request="onSaveSettings"  data-request-success="showResponse(data)">
+            <div class="form-group">
+                <h2 class="text-center">Connection</h2>
+                <p>Self issued token - not required for displaying articles</p>
+                <input class="form-control" type="text" value="<?= $token ?>" name="token"/>
+                <?php if(isset($user)): ?>
+                <p style="margin-top:12px;font-weight: bold;">Connected Medium username: <?= $user ?> </p>
+                <?php endif; ?>
+                <button
+                        type="submit"
+                        class="btn btn-success btn-block m-t-md" style="text-align: center;">
+                    Save
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+

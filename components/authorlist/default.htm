@@ -1,0 +1,19 @@
+{% set authors = authorList.authors %}
+<div class="container">
+    <div class="row articles-holder" style="margin-top:200px;">
+        {% for author in authors %}
+        <div class="col-lg-3 article-item">
+            <h2>
+                <a href="{{'article-list' | page({author_name:author.name})}}">
+                    {{ author.name }}
+                </a>
+            </h2>
+
+            <!--<h2>
+                {{ author.name }}
+            </h2> -->
+        </div>
+        {% endfor %}
+    </div>
+</div>
+

@@ -1,0 +1,18 @@
+{% set articles = articleList.articles %}
+<section>
+    <div class="container">
+        <div class="row articles-holder" style="margin-top:200px;">
+            {% for article in articles %}
+            <div class="col-sm-12 col-md-8 col-lg-6 mx-auto mx-lg-0 article-item">
+                <div class="article-wrapper">
+                    <a  href="{{'article-single' | page({author_name:article.author.name,local_url:article.local_url})}}"><h2 class="article-title">{{ article.title }}</h2></a>
+                    <h4>Author: {{ article.author.name }}</h4>
+                    <p>Published: {{article.getPublishDate(article.publish_date)}}</p>
+                    <a href="{{article.link}}">Read on Medium</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+

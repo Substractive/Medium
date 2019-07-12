@@ -1,0 +1,16 @@
+{% set article = articleSingle.article %}
+<section>
+    <div class="container">
+        <div class="row articles-holder" style="margin-top:200px;">
+            <div class="col-sm-12 col-md-8 col-lg-12 mx-auto mx-lg-0 article-item">
+                <div>
+                    <h2>{{ article.title }}</h2>
+                    <p>Published: {{article.getPublishDate(article.publish_date)}}</p>
+                    <h4>Author: <a href="https://medium.com/{{article.author.name}}">{{ article.author.name }}</a> </h4>
+                    <div>{{ article.content | raw  }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

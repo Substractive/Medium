@@ -1,0 +1,53 @@
+<style>
+    .refresh-articles:hover{
+        color:#0000ff;
+    }
+</style>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="text-center">Articles</h1>
+    </div>
+</div>
+<div class="row m-t-md">
+    <div class="col-lg-10 col-lg-offset-1" style="padding:15px;">
+        <form class="form-elements" role="form" data-request="onArticleFetch"  data-request-success="showResponse(data)">
+            <div class="form-group">
+                <h2 class="text-center">Articles RSS</h2>
+                <p>Author or publication name</p>
+                <input class="form-control" type="text" name="name"/>
+                <button
+                        style="text-align: center;"
+                        type="submit"
+                        class="btn btn-default btn-block m-t-0">
+                    Get articles
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <h3 class="text-center">Existing authors</h3>
+        <?php foreach($authors as $author): ?>
+        <span style="padding:5px;line-height:30px;background: #ddd;"><?= $author->name ?>
+            <i class="refresh-articles oc-icon-refresh" style="cursor: pointer" data-author="<?= $author->name ?> "></i>
+        </span>
+        <?php endforeach; ?>
+    </div>
+</div>
+
+<script>
+    $(".refresh-articles").on("click",function () {
+        refreshArticles($(this).data('author'))
+    });
+
+    function refreshArticles(authorName){
+        $.request('onRefreshArticles', {
+            data:{authorName:authorName},
+            success:function(data){
+                showResponse(data);
+            }
+        })
+    }
+</script>

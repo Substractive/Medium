@@ -1,0 +1,4 @@
+1.0.1:
+    - First version contains API SDK in place for future development. At the moment articles can be pulled from Medium.
+    - install.php
+    - seed.php

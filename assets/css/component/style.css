@@ -1,0 +1,32 @@
+.article-item img{
+    width: 100%;
+}
+
+.article-item {
+    word-break: break-word;
+    margin-bottom:3rem;
+    text-align: center;
+
+}
+
+.article-wrapper{
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 10px 1px #FDE9EC;
+    box-shadow: 0 2px 10px 1px #FDE9EC;
+    margin-left:auto;
+    margin-right:auto;
+    height:  100%;
+}
+
+
+.article-wrapper a{
+    text-decoration: none;
+}
+
+.article-wrapper .article-title {
+    color:#2B2D42;
+}
+
+.article-wrapper .article-title:hover{
+    color: rgba(239,35,60,0.75)!important;
+}
